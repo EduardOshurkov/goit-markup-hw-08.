@@ -1,0 +1,269 @@
+.team {
+  background-color: #F5F4FA;
+}
+
+.team-info {
+    @include tab {
+      display: flex;
+      flex-wrap: wrap;
+
+      @include desk {
+        flex-wrap: nowrap;
+      }
+    }
+}
+
+.team-block {
+@include tab {
+  width: calc((100% - 2 * 15px) / 2);
+
+  &:nth-child(2n + 1) {
+    @include tab {
+      margin-right: 30px;
+    }
+  }
+}
+
+@include desk {
+  width: calc((100% - 90px) / 4);
+  margin-right: 30px;
+}
+}
+
+.team-title {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.18;
+
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: #212121;
+
+  margin-bottom: 30px;
+
+  @include desk {
+    font-size: 36px;
+    margin-bottom: 50px;
+  }
+}
+
+
+.team-info__list {
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  max-width: 460px;
+
+  background: #FFFFFF;
+
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+  0px 1px 1px rgba(0, 0, 0, 0.14),
+  0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+
+  margin-bottom: 30px;
+
+  @include desk {
+    margin-bottom: 0;
+  }
+}
+
+
+.team-info__name {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: #212121;
+  margin-top: 30px;
+}
+
+.team-info__text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.19;
+
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: #757575;
+
+  margin-top: 10px;
+}
+
+.social-content__list {
+  display: flex;
+  justify-content: center;
+}
+
+.social-content__link {
+  margin-top: 16px;
+  margin-bottom: 30px;
+  width: 44px;
+  height: 44px;
+  background-color: var(--first-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: #afb1b8;
+
+  &:hover,
+  &:focus {
+    background-color: var(--accent-color);
+    color: var(--first-color);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+.social-content__icon {
+  fill: currentColor;
+}
+
+.social-content__item+.social-content__item {
+  margin-left: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// .team {
+//   flex-wrap: wrap;
+//   background-color: #f5f4fa;
+// }
+
+// .team-title {
+//   font-weight: 700;
+//   font-size: 36px;
+//   line-height: 1.17;
+//   text-align: center;
+//   letter-spacing: 0.03em;
+//   color: var(--title-color);
+
+//   margin-bottom: 30px;
+
+//   @include desk {
+//     margin-bottom: 50px;
+//   }
+// }
+
+// .team-info__list {
+//   background-color: var(--first-color);
+//   border-radius: 0px 0px 4px 4px;
+//   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+//     0px 2px 1px rgba(0, 0, 0, 0.2);
+
+//   margin-bottom: 30px;
+//   align-items: center;
+//   text-align: center;
+
+//   @include desk {
+//     margin-right: 30px;
+//     &:nth-child(4n) {
+//       margin-right: 0;
+//     }
+//   }
+// }
+
+// .team-info__content {
+//   padding-top: 30px;
+// }
+
+// .team-info__name {
+//   font-weight: 500;
+//   font-size: 16px;
+//   line-height: 1.19;
+//   letter-spacing: 0.03em;
+//   color: var(--title-color);
+
+//   text-transform: none;
+//   margin-bottom: 10px;
+
+//   text-align: center;
+// }
+
+// .team-info__text {
+//   font-family: Roboto;
+//   font-size: 16px;
+//   line-height: 1.19;
+//   letter-spacing: 0.03em;
+//   color: var(--text-color);
+
+//   text-align: center;
+// }
+
+// .social-content__list {
+//   display: flex;
+//   justify-content: center;
+// }
+
+// .social-content__link {
+//   margin-top: 16px;
+//   margin-bottom: 24px;
+//   width: 44px;
+//   height: 44px;
+//   background-color: var(--first-color);
+//   border-radius: 50%;
+//   color: #afb1b8;
+
+//   &:hover,
+//   &:focus {
+//     background-color: var(--accent-color);
+//     color: var(--first-color);
+//     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+//     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+//   }
+
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+
+//   @include desk {
+//     margin-bottom: 30px;
+//   }
+// }
+
+// .social-content__icon {
+//   fill: currentColor;
+// }
+
+// .social-content__item + .social-content__item {
+//   margin-left: 10px;
+// }
