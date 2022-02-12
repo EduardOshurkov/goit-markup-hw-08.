@@ -19,8 +19,21 @@ ul {
 
 button {
   cursor: pointer;
+  border: none;
 }
 
 img {
   display: block;
+}
+
+.list {
+  list-style: none;
+}
+
+.link {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
 }
