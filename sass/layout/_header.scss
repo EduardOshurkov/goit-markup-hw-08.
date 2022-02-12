@@ -2,6 +2,68 @@
   border-bottom: 1px solid #ececec;
 }
 
+.mob-menu-btn {
+  border: none;
+  width: 40px;
+  height: 40px;
+  padding-top: 10px;
+  margin-left: auto;
+  background-color: #fff;
+  color: #212121;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    color: #2196f3;
+  }
+  @include tab {
+    display: none;
+  }
+}
+
+.mob-menu-btn__icon {
+  fill: currentColor;
+}
+
+.mob-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: $bgPrimaryColor;
+  transform: translateY(-100%);
+  transition: transform $mainTransition;
+  @include min768 {
+    display: none;
+  }
+  &.is-open {
+    transform: translateY(0);
+  }
+}
+
+.mob-menu__box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 48px 40px;
+  width: 100%;
+  height: 100%;
+  @include mob {
+    width: 480px;
+  }
+}
+
+.page-list__item,
+.header-contact-icon {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+}
+
 .header-nav,
 .page-list {
   display: flex;
@@ -11,25 +73,41 @@
 .header__logo-start {
   font-family: Raleway;
   font-weight: 700;
-  font-size: 26px;
-  line-height: 31px;
+  font-size: 24px;
+  line-height: 28px;
   letter-spacing: 0.03em;
   color: var(--accent-color);
+
+  @include desk {
+    font-size: 26px;
+    line-height: 31px;
+  }
 }
 
 .header__logo-finish {
   font-family: Raleway;
   font-weight: 700;
-  font-size: 26px;
-  line-height: 31px;
+  font-size: 24px;
+  line-height: 28px;
   letter-spacing: 0.03em;
   color: var(--title-color);
+
+  @include desk {
+    font-size: 26px;
+    line-height: 31px;
+  }
 }
 
 .header-logo {
-  padding-top: 24px;
-  padding-bottom: 25px;
-  margin-right: 93px;
+  padding-top: 26px;
+  padding-bottom: 26px;
+
+  @include tab {
+    margin-right: 88px;
+  }
+  @include desk {
+    margin-right: 93px;
+  }
 }
 
 .page-list__link {
@@ -78,16 +156,28 @@
 }
 
 .header-contact-icon {
-  margin-left: 305px;
+  @include tab {
+    margin-left: 66px;
+  }
+  @include desk {
+    margin-left: 305px;
+  }
 }
 
 .contact-list {
-  display: flex;
-  margin-left: auto;
+  @include desk {
+    display: flex;
+    margin-left: auto;
+  }
 }
 
 .contact-list__mail {
-  margin-right: 30px;
+  @include tab {
+    margin-bottom: 10px;
+  }
+  @include desk {
+    margin-right: 30px;
+  }
 }
 
 .contact-list__link {
@@ -108,5 +198,10 @@
 .contact-list__envelope,
 .contact-list__smartphone {
   fill: currentColor;
-  margin-right: 10px;
+  @include tab {
+    margin-right: 8px;
+  }
+  @include desk {
+    margin-right: 10px;
+  }
 }
