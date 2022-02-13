@@ -22,41 +22,37 @@
 
 .clients-content__list {
   display: flex;
-  justify-self: center;
   flex-wrap: wrap;
 }
 .clients-content__item {
- @include mob {
-   width: calc((100% - 2 * 15px) / 2);
- }
-   &:nth-child(2n + 1) {
-     @media screen and (max-width: 1200px) {
-        margin-right: 30px;
-        margin-bottom: 30px;
-     } 
-   }
-
-   &:nth-child(n + 5) {
-     margin-bottom: 0;
-   }
-
-   @include tab {
-    width: calc((100% - 60px) / 3);
-    margin-right: 30px;
-   }
-   
-   @include tab {
-  &:nth-child(3n + 3) {
+  &:nth-child(2n + 1) {
     @media screen and (max-width: 1200px) {
-      margin-right: 0;
+      margin-right: 30px;
+      margin-bottom: 30px;
     }
   }
-   }
 
-   @include desk {
-     width: calc((100% - 150px) / 6);
-       margin-right: 30px;
-   }
+  &:nth-child(n + 5) {
+    margin-bottom: 0;
+  }
+
+  @include tab {
+    width: calc((100% - 60px) / 3);
+    margin-right: 30px;
+  }
+
+  @include tab {
+    &:nth-child(3n + 3) {
+      @media screen and (max-width: 1200px) {
+        margin-right: 0;
+      }
+    }
+  }
+
+  @include desk {
+    width: calc((100% - 150px) / 6);
+    margin-right: 30px;
+  }
 
   &:last-child {
     @include desk {
