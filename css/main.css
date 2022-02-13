@@ -1233,6 +1233,9 @@ h3 {
   .portfolio-list__content:nth-child(-n + 2) {
     margin-top: 30px;
   }
+  .portfolio-list__content:last-child {
+    margin-top: 30px;
+  }
   .portfolio-list__content:nth-child(2n + 1) {
     margin-right: 30px;
   }
