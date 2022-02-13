@@ -1,5 +1,4 @@
 .team {
-  width: 100%;
   background-color: #f5f4fa;
 }
 
@@ -15,15 +14,15 @@
 }
 
 .team-block {
-  @include tab {
-    width: calc((100% - 2 * 15px) / 2);
+  // @include tab {
+  //   width: calc((100% - 2 * 15px) / 2);
 
-    &:nth-child(2n + 1) {
-      @include tab {
-        margin-right: 30px;
-      }
-    }
-  }
+  //   &:nth-child(2n + 1) {
+  //     @include tab {
+  //       margin-right: 30px;
+  //     }
+  //   }
+  // }
 
   @include desk {
     width: calc((100% - 90px) / 4);
@@ -53,7 +52,7 @@
   align-items: center;
   text-align: center;
   justify-content: center;
-  // max-width: 460px;
+  max-width: 450px;
 
   background: #ffffff;
 
@@ -65,6 +64,12 @@
 
   @include desk {
     margin-bottom: 0;
+  }
+
+  &:nth-child(2n + 1) {
+    @include tab {
+      margin-right: 30px;
+    }
   }
 }
 
