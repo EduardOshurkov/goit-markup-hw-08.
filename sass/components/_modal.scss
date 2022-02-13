@@ -14,8 +14,8 @@
 
 .modal {
   box-sizing: border-box;
-  width: 528px;
-  min-height: 581px;
+  width: 450px;
+  min-height: 609px;
   background-color: #ffffff;
   border-radius: 5px;
   position: absolute;
@@ -25,6 +25,11 @@
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   padding: 40px;
   padding-bottom: 40px;
+
+  @include desk {
+    width: 528px;
+    min-height: 581px;
+  }
 }
 
 .modal-close {
@@ -134,13 +139,21 @@
 }
 
 .check-text {
-  align-items: center;
+  font-family: Roboto;
+  font-style: normal;
   font-weight: normal;
-  font-size: 14px;
-  line-height: 24px;
-  letter-spacing: 0.03em;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.02em;
   color: #757575;
   display: flex;
+  flex-wrap: wrap;
+
+  @include desk {
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+  }
 }
 
 .check-text span {
